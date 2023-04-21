@@ -75,7 +75,7 @@ namespace WebAppAuthIdentity.Controllers
                 else
                     ModelState.AddModelError("", "Email can not be empty");
 
-                IdentityResult result = await userManager.UpdateAsync(user);
+                IdentityResult result = await userManager.UpdateAsync(user); //Из класса UserManager
 
                 if (result.Succeeded)
                     return RedirectToAction("Index");
